@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>My Hotel</title>
-<link rel="stylesheet" type="text/css" href="Hotel.css">
-</head>
-<body>
-<header>
-	<h1>My Hotel</h1>
-	<h2>The Best Hotel in Tepa</h2>
-</header>
-<input type="text">
-<input type="email">
-<nav>
-<ul>
-	<li><a href="info.html" id="firsti">Home</a></li>
-	<li><a href="#" class="gallery">Gallery</a></li>
-	<li><a href="#">Info</a></li>
-	<li><a href="#">Contact</a></li>
-	<ul>
-		<li>Something</li>
-	</ul>
-</ul>
-</nav>
-<h2>Our Hotel</h2>
-<p>We are the best hotel in Tepa!</p>
-<img src="500DSC138.jpg">
-<h3>Our rules</h3>
-<ol>
-	<li>Be polite</li>
-	<li>Speak Spanish</li>
-	<li>Alwaya pay</li>
-</ol>
-<hr>
-<footer>
-<h3>About us</h3>
-<small>We hav been in the tourism industry since <b>1981</b><em>Yeah!</em>. We take pribe in our <i>customer satisfaction</i></small>
-</footer>
-</body>
+	<head>
+		<title>My Hotel</title>
+		<link rel="stylesheet" href="Hotel.css">
+	</head>
+	<body>
+		<header>
+			<h1>My Hotel</h1>
+			<h2>The Best Hotel in Tepa</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#" class="gallery">Gallery</a></li>
+				<li><a href="#">Info</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<h2>Book with us</h2>
+		<p></p>
+		<h3>Prices (per night)</h3>
+		<table>
+			<thead>
+				<tr>
+					<!-- Possible use of th instead td -->
+					<td>Guest type</td>
+					<td>Price</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Kids (8 years old or less)</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>Adults (older than 8 years old)</td>
+					<td>100</td>
+				</tr>
+			</tbody>
+		</table>
+		<form novalidate name="booking-form">
+			<h3>Nights</h3>
+			<p>How many nights?<input type="number" min="1" max="10" placeholder="1" required name="nights"></p>
+			<h3>Guests</h3>
+			<table data-guests=>
+				<thead>
+					<tr>
+						<th>#</th>
+						<td>First name</td>
+						<td>Last name</td>
+						<td>Age</td>
+						<td>Actions</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td><input type="text" required></td>
+						<td><input type="text" required></td>
+						<td><input type="number" required></td>
+						<td><input type="button" value="+"></td></tr>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Total</h3>
+			<input type="button" value="Calculate">
+			<table>
+				<thead>
+					<tr>
+						<td>Number of nights</td>
+						<td>Number of kids</td>
+						<td>Number of adults</td>
+						<td>Number of guests</td>
+						<td>Total to pay</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Send booking</h3>
+			<input type="submit" value="Send">
+		</form>
+		<script src="js/jquery.js"></script>
+		<script src="js/booking.js"></script>
+	</body>
 </html>
